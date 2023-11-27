@@ -3,7 +3,7 @@
 
 > This code was forked from and depends on https://github.com/oracle-quickstart/oci-adb/. It was adapted to work with OCI Resource Manager.
 
-[![Deploy_To_OCI](images/DeployToOCI.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/m1nka/adb-resource-manager/archive/refs/heads/main.zip)
+[![Deploy_To_OCI](.images/DeployToOCI.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/m1nka/adb-resource-manager/archive/refs/heads/main.zip)
 
 These is Terraform module that deploys [Autonomous Database (ADB)](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adboverview.htm) on [Oracle Cloud Infrastructure (OCI)](https://cloud.oracle.com/en_US/cloud-infrastructure).
 

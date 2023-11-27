@@ -3,8 +3,8 @@
 
 module "oci-adb" {
   source                                = "github.com/oracle-quickstart/oci-adb"
-  adb_database_db_name                  = "myatp"
-  adb_database_display_name             = "myatp"
+  adb_database_display_name             = var.adb_database_display_name
+  adb_database_db_name                  = var.adb_database_db_name
   adb_password                          = var.adb_password
   adb_database_db_workload              = "OLTP" # Autonomous Transaction Processing (ATP)
   adb_free_tier                         = false
@@ -13,6 +13,6 @@ module "oci-adb" {
   compartment_ocid                      = var.compartment_ocid
   use_existing_vcn                      = false
   adb_private_endpoint                  = true
-  adb_private_endpoint_label            = "myatppe"
+  adb_private_endpoint_label            = "adb_pe"
 }
 

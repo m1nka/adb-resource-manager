@@ -1,0 +1,77 @@
+# Title shown in Application Information tab.
+title: Deploy an Autonomous Database
+# Sub Title shown in Application Information tab.
+description: Deploy an Autonomous Database with Resource Manager with public or private connectivity.
+schemaVersion: 0.1
+version: "20231129"
+
+# URL of Logo Icon used on Application Information tab. You can copy the contentId from the Marketplace listing logo URL in the Marketplace Partner portal.
+# (Optional)
+# logoUrl: https://cloudmarketplace.oracle.com/marketplace/content?contentId=71617800
+
+# Used in Application Information tab to Hyperlink Title and Logo to the Marketplace
+# Listing.
+# Also used to link to Listing Usage section for "View Instructions".
+# (Optional) If it is missing, Application Information uses the
+# "marketplace-listing-id" tag for the same purpose.
+# source:
+#  type: marketplace
+#  reference: 12345
+
+locale: "en"
+variableGroups:
+  - title: "Hidden Variables"
+    visible: false
+    variables:
+      - "tenancy_ocid"
+      - "user_ocid"
+      - "fingerprint"
+      - "private_key_path"
+      - "private_key_password"
+
+  - title: "Environment"
+    visible: true
+    variables:
+      - "region"
+      - "compartment_ocid"
+
+  - title: "Networking"
+    variables:
+      - "subnet_ocid"
+      - "nsg_ocids"
+
+  - title: "Autonomous Database"
+    variables:
+      - "db_workload"
+      - "adb_display_name"
+      - "admin_password"
+      - "license_model"
+      - "cpu_core_count"
+      - "data_storage_size_in_tbs"
+
+######################################################
+##############          VARIABLES        #############
+######################################################
+
+variables:
+  region:
+    type: oci:identity:region:name
+    title: "Region"
+    description: "The region for resources deployment."
+    required: true
+
+######################################################
+##############    HIDDEN VARIABLES       #############
+######################################################
+
+
+  tenancy_ocid:
+    type: string
+    title: "Tenancy ID"
+    description: "The Oracle Cloud Identifier (OCID) for your tenancy"
+    required: true
+
+  availability_domain_number:
+    type: string
+    required: false
+    description: "Availability Domain Number (Not used)"

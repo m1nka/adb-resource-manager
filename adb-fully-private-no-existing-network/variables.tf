@@ -3,4 +3,6 @@
 
 variable "compartment_ocid" {}
 variable "region" {}
+variable "adb_database_display_name" {}
+variable "adb_database_db_name" {}
 variable "adb_password" {}
